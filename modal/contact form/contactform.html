@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> contact form</title>
+    <style>
+        input[type=text], select, textarea{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top:6px;
+            margin-bottom: 16px;
+        }
+        input[type=submit]{
+            background-color: #ccc;
+            color: dimgray;
+            border-radius: 5px;
+            border: none;
+            padding: 12px 16px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover{
+            color: black;
+            opacity: 0.6;
+            box-shadow: 1px 3px 2px gray;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="container">
+        <form action="/action_page.php">
+        <labal for="fullname"> Full Name</labal>
+            <input type="text" placeholder="your full name" name="fullname">
+            <label for="country"> Country</label>
+            <select id="country" name="country">
+            <option value="Nepal">Nepal</option>
+                <option value="India">India</option>
+                <option value="Australia">Australia</option>
+                <option value="China">China</option>
+            </select>
+            <label for="subject">Comment</label>
+            <textarea id="subject" placeholder="write your comment...." style="height:200px;"></textarea>
+            <input type="submit" value="send">
+        </form>
+        </div>
+    </body>
+</html>

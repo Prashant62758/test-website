@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <style>
+        .navbar{
+            overflow: hidden;
+            background-color: #fff;
+            padding: 12px 16px;
+        }
+        .navbar a{
+            float:left;
+            right: 30%;
+            padding: 12px 16x;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+        .subnav{
+            float: right;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+        }
+        .subnav .subnavbtn{
+            border: none;
+            background-color: inherit;
+            color: black;
+            margin: 0;
+            font-size: 15px;
+            padding: 12px 16px;
+            font-family: inherit;
+            outline: none;
+            
+        }
+        .navbar a:hover, .subnav:hover .subnavbtn{
+            color: blue;
+        }
+        .subnav-content{
+            display: none;
+            position: absolute;
+            left: 0;
+            background: gray;
+            max-width: 160px;
+            box-shadow: rgba(0, 0, 0,0.2);
+            z-index: 1;
+        }
+        .subnav a{
+            padding: 12px 16px;
+            color: antiquewhite;
+            text-decoration: none;
+            display: none;
+            
+        }
+        .subnav-contant a:hover{
+            color: blueviolet;
+        }
+        .subnav:hover .subnav-content{
+            display: block;
+        }
+        header h2{
+            position: absolute;
+            
+        }
+    </style>
+    </head>
+<body>
+    <div class="navbar">
+        <header>
+        <h2>Shapely Demo</h2>
+        </header>
+    <a href="#"> home </a>
+        <a href="#">Blog</a>
+        <div class="subnav">
+        <button class="subnavbtn">About The Test \/</button>
+            <div class="subnav-content">
+            <a href="#">Company</a>
+                <a href="#">Team</a>
+            </div>
+        </div>
+        <div class="subnav">
+        <button class="subnavbtn">level 1 \/</button>
+            <div class="subnav-content">
+            <a href="#">Respansive design package </a>
+                <a href="#"> small bussiness web site</a>
+                <a href="#"> CUstom Solution</a>
+                <a href="#"> Our Application</a>
+            </div>
+        </div>
+        <div class="subnav">
+        <button class="subnavbtn"> Shop \/</button>
+            <div class="subnav-content">
+            <a href="#">abc  </a>
+                <a href="#"> cbx</a>
+                <a href="#">ard</a>
+                <a href="#"> esa</a>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

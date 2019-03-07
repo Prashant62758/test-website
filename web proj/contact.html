@@ -1,0 +1,148 @@
+<html>
+<head>
+    <title> contact</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: ghostwhite;
+            font-family: cursive, monospace;
+            color: darkgreen;
+        }
+        ul{
+            position: fixed;
+            list-style-type: none;
+            height: 100%;
+            background-color:lightblue;
+            margin: 0;
+            padding: 0;
+            width: 25%;
+            overflow: auto;
+        }
+        li a{
+            text-decoration: none;
+            padding: 12px 16px;
+            color: forestgreen;
+            display: block;
+            transition: .2s linear;
+        }
+        li a:hover{
+            background-color: cadetblue;
+            color: darkgreen;
+            font-size: 25px;
+        }
+        li a.active{
+            background-color:darkcyan;
+            color: aquamarine;
+            transition: .2s ease;
+        }
+        @media screen and (max-height: 450px){
+            ul {
+                padding-top: 15px;
+            }
+            li a{
+                font-size: 18px;
+            }
+        }
+        .container{
+            position: relative;
+            width: 50%;
+            top: 50px;
+            cursor: pointer;
+        }
+        .image{
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            box-shadow:1px 10px 20px 2px gray;
+        }
+        .image:hover{
+            box-shadow:1px 10px 20px 2px gray;
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: ghostwhite;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+        .container:hover .overlay{
+            bottom: 0%;
+            height: 100%;
+            position: relative;
+        }
+        .text{
+            color: rebeccapurple;
+            font-size: 20px;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            text-align: left;
+        }
+        .num{
+            position: absolute;
+            font-size: 20px;
+            color: rebeccapurple;
+            top: 50%;
+            left:50%;
+            -webkit-transform: translate(-50%, -50%);
+            text-align: left;
+        }
+        .email{
+            position: absolute;
+            font-size: 15px;
+            color: firebrick;
+            top: 60%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+         #footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: green;
+            color: ghostwhite;
+            font-size: 25px;
+            text-align: center;
+            padding: 5px;
+        }
+       
+           
+    </style>
+    </head>
+    <body>
+    <ul>
+        <li><a href="home.html" > Home</a></li>
+        <li> <a href="blogs.html" >Blogs</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li> <a href="#">About</a></li>
+        </ul>
+        <div style="margin-left:25%; padding: 1px 16px; height: 1000px;">
+            <h1> Create web page application softwares </h1>
+            <div class="container">
+            <img src="Smiley-Thumbnail.png" alt="avatar" class="image">
+                <div class="overlay">
+                <span class="text"> PrashantThapa</span>
+                    <span class="num"> 9846892706</span>
+                 <span class="email">prashant.thapa62758@gmail.com</span>
+                </div>
+            </div>
+            <div class="container" style="margin-left: 250px; margin-top:-200px;">
+            <img src="Smiley-Thumbnail.png" alt="avatar" class="image">
+                <div class="overlay">
+                <div class="text"> PrashantThapa</div>
+                    <div class="num"> 9846892706</div>
+                 <div class="email">prashant.thapa62758@gmail.com</div>
+                </div>
+            </div>
+            <div id="footer">prashant.thapa62758@gmail.com</div>
+        </div>
+    </body>
+</html>

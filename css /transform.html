@@ -1,0 +1,39 @@
+<html>
+<head>
+    <style>
+        body{
+            height: 1000px;
+            background-color: aquamarine
+        }
+        .translate{
+            position: absolute;
+            overflow: scroll;
+            border-top-right-radius: 20%;
+            width: 200px;
+            height:30%;
+            background-color: coral;
+            text-align: center;
+            color: lightyellow;
+            transform: translate(100px, 2%);
+            box-shadow: 2px 2px 4px 3px gray;
+            animation: change 1s  linear infinite;
+        }
+        @keyframes change{
+            0%{color:black;}
+            10%{color:aquamarine;}
+            20%{color:darkcyan;}
+            100%{color: darkturquoise;}
+        }
+    </style>
+    </head>
+    <body>
+    <div class="translate"> 
+     <h4>Nepal</h4>
+        <p> Nepal <br> Katmandu is the capital city of Nepal</p>
+        </div>
+        <div class="translate" style="left: 250px;">
+        <h4>India </h4>
+            <p> New Delhi is the capital city of India.</p>
+        </div>
+    </body>
+</html>
