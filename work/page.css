@@ -1,4 +1,13 @@
- .topnavv{
+body{
+    
+    box-sizing: border-box;
+}
+::selection{
+    color: white;
+    background-color: rebeccapurple;
+    opacity: 0.6;
+}
+.topnavv{
             overflow: hidden;
             background-color: white;
             margin-left: 40%;
@@ -359,13 +368,16 @@
         }
 .contactform{
     width: 90%;
-    height:auto;
+    height: auto;
     padding: 5%;
     background-color: lightgray;
     position: relative;
 }
 .contactform h{
-    margin-left: 40%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+text-align: center;
     font-size: 50px;
     opacity: 0.4;
 }
@@ -416,4 +428,115 @@ input[type=text]:hover, textarea:hover{
 }
 input[type=submit]:hover{
     background-color: rebeccapurple;
+}
+@media screen and (max-width: 830px){
+    .contactform{
+        float: left;
+        display: inline-block;
+    }
+    .contactform address{
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        transform: translate(-0%);
+    }
+    .contactform form{
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        transform: translate(-5%, 0%);
+    }
+    #footer{
+        position: inherit;
+        float: left;
+    }
+    #myBtn{
+        display: block;
+    }
+    .download{
+        width: 100%;
+        display: block;
+        float: left;
+    }
+    .download p{
+        float: left;
+    }
+    .download button{
+        position: relative;
+        transform: translate(-70%, 10% );
+    }
+    .carousel-home .slideshow-container .mySlides img{
+        float: left;
+        width: 100%;
+    }
+}
+#myBtn{
+    display: none;
+    position:   fixed;
+    padding: 12px 16px;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: dimgray;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: sans-serif, monospace;
+    opacity: 0.7;
+    border-radius: 4px;
+}
+#myBtn:hover{
+    opacity: 1;
+}
+.carousel-home{
+    padding: 20px;
+    background-color: #dabbbb;
+    opacity: 0.6;
+    height: auto;
+}
+.mySlides{
+    display: none;
+}
+img{
+    vertical-align: middle;
+    width: 100%;
+}
+.slideshow-container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.download{
+    width: 100%;
+    height: 200px;
+    background-color: antiquewhite;
+    opacity: 0.8;
+    display: block;
+}
+.download p{
+    text-align: center;
+    font-size: 30px;
+    padding-right: 30%;
+    padding-top: 60px;
+    font-family: sans-serif;
+}
+.download button{
+            border: none;
+            outline: none;
+            float: right;
+    margin-top: -60px;
+            margin-right: 10%;
+            padding: 12px 16px;
+            background-color: blueviolet;
+           color: white;
+           font-size: 13px;
+            text-align: center;
+            cursor: pointer;
+}
+.download button:hover{
+    background-color: rebeccapurple;
+    box-shadow: 0px 3px 4px 0px gray;
 }
