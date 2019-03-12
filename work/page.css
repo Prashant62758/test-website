@@ -454,18 +454,7 @@ input[type=submit]:hover{
     #myBtn{
         display: block;
     }
-    .download{
-        width: 100%;
-        display: block;
-        float: left;
-    }
-    .download p{
-        float: left;
-    }
-    .download button{
-        position: relative;
-        transform: translate(-70%, 10% );
-    }
+    
     .carousel-home .slideshow-container .mySlides img{
         float: left;
         width: 100%;
