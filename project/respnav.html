@@ -3,6 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        body{
+            transition: background-color .5s;
+        }
         .container{
             display: inline-block;
             cursor: pointer;
@@ -25,20 +28,92 @@
             -webkit-transform: rotate(45deg) translate(-8px, -8px);
             transform: rotate(45deg) translate(-8px, -8px);
         }
-        
+        .sidenavbar{
+            height: 100%;
+            position: fixed;
+            width: 0;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: lightblue;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidenavbar a{
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: aliceblue;
+            display: block;
+            transition: 0.3s;
+            opacity: 0.7;
+        }
+        .sidenavbar a:hover{
+            opacity: 1;
+        }
+        .sidenavbar .closebtn{
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        #hide{
+            margin-top: -20px;
+        }
+        #side{
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        #side span{
+            
+        }
+        @media screen and (max-width: 450px){
+            .sidenavbar{
+                padding-top: 15px;
+            }
+            .sidenavbar a{
+                font-size: 18px;
+            }
+        }
     </style>
     </head>
     <body>
-    
-      <div class="container" onclick="menu(this);">
+        
+    <div class="sidenavbar" id="Sidenav">
+        <a href="#" class="closebtn" onclick="closeNav();"> &times; </a>
+        <a href="#">Home</a>
+        <a href="#">contact</a>
+        <a href="#"> Photos</a>
+        <a href="#">Abouts</a>
+        </div>
+<!--        <div id="side">-->
+<!--        <span onclick="openNav();" style=""> <p id="hide">&#9776;</p> </span>-->
+<!--        </div>-->
+ <div class="container" id="another-burger" onclick="openNav();">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
         </div>
+        
+         
         <script>
-             function menu(x){
-             x.classList.toggle("change");
-         }
+            function menu(x){
+           x.classList.toggle("change");       }
+            function openNav(){
+                document.getElementById("Sidenav").style.width= "250px";
+//                document.getElementById("another-burger").style.marginLeft= "250px";
+                document.body.style.backgroundColor="rgba(0, 0, 0, 0.3)";
+                document.getElementById("hide").style.display = "none";
+ 
+            }
+            function closeNav(){
+                document.getElementById("Sidenav").style.width = "0";
+                document.getElementById("another-burger").style.marginLeft = "0";
+                document.body.style.backgroundColor = "white";
+                document.getElementById("hide").style.display ="block";
+            }
         </script>
     </body>
 </html>
