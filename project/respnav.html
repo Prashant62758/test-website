@@ -3,36 +3,42 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body{
+        body {
             transition: background-color .5s;
         }
-        .container{
+
+        .container {
             display: inline-block;
             cursor: pointer;
         }
-        .bar1, .bar2, .bar3{
+
+        .bar1, .bar2, .bar3 {
             width: 35px;
             height: 5px;
             background-color: black;
             margin: 6px 0;
             transition: 0.3s linear;
         }
-        .change .bar1{
+
+        .change .bar1 {
             -webkit-transform: rotate(-45deg) translate(-9px, 6px);
             transform: rotate(-45deg) translate(-9px, 6px);
         }
-        .change .bar2{
+
+        .change .bar2 {
             opacity: 0;
         }
-        .change .bar3{
+
+        .change .bar3 {
             -webkit-transform: rotate(45deg) translate(-8px, -8px);
             transform: rotate(45deg) translate(-8px, -8px);
         }
-        .sidenavbar{
+
+        .sidenavbar {
             height: 100%;
             position: fixed;
             width: 0;
-            z-index: 1;
+            /*z-index: 1;*/
             top: 0;
             left: 0;
             background-color: lightblue;
@@ -40,7 +46,8 @@
             transition: 0.5s;
             padding-top: 60px;
         }
-        .sidenavbar a{
+
+        .sidenavbar a {
             padding: 8px 8px 8px 32px;
             text-decoration: none;
             font-size: 25px;
@@ -49,71 +56,95 @@
             transition: 0.3s;
             opacity: 0.7;
         }
-        .sidenavbar a:hover{
+
+        .sidenavbar a:hover {
             opacity: 1;
         }
-        .sidenavbar .closebtn{
+
+        .sidenavbar .closebtn {
             position: absolute;
             top: 0;
             right: 25px;
             font-size: 36px;
             margin-left: 50px;
         }
-        #hide{
+
+        #hide {
             margin-top: -20px;
         }
-        #side{
+
+        #side {
             transition: margin-left .5s;
             padding: 16px;
         }
-        #side span{
-            
+
+        #side span {
+
         }
-        @media screen and (max-width: 450px){
-            .sidenavbar{
+
+        @media screen and (max-width: 450px) {
+            .sidenavbar {
                 padding-top: 15px;
             }
-            .sidenavbar a{
+
+            .sidenavbar a {
                 font-size: 18px;
             }
         }
     </style>
-    </head>
-    <body>
-        
-    <div class="sidenavbar" id="Sidenav">
-        <a href="#" class="closebtn" onclick="closeNav();"> &times; </a>
-        <a href="#">Home</a>
-        <a href="#">contact</a>
-        <a href="#"> Photos</a>
-        <a href="#">Abouts</a>
-        </div>
+</head>
+<body>
+
+<div class="sidenavbar" id="Sidenav">
+    <a href="#">Home</a>
+    <a href="#">contact</a>
+    <a href="#"> Photos</a>
+    <a href="#">Abouts</a>
+</div>
 <!--        <div id="side">-->
 <!--        <span onclick="openNav();" style=""> <p id="hide">&#9776;</p> </span>-->
 <!--        </div>-->
- <div class="container" id="another-burger" onclick="openNav();">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-        </div>
-        
-         
-        <script>
-            function menu(x){
-           x.classList.toggle("change");       }
-            function openNav(){
-                document.getElementById("Sidenav").style.width= "250px";
-//                document.getElementById("another-burger").style.marginLeft= "250px";
-                document.body.style.backgroundColor="rgba(0, 0, 0, 0.3)";
-                document.getElementById("hide").style.display = "none";
- 
-            }
-            function closeNav(){
-                document.getElementById("Sidenav").style.width = "0";
-                document.getElementById("another-burger").style.marginLeft = "0";
-                document.body.style.backgroundColor = "white";
-                document.getElementById("hide").style.display ="block";
-            }
-        </script>
-    </body>
+<div class="container" id="another-burger" onclick="openNav(this);">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+</div>
+
+
+<script>
+    function menu(x) {
+        console.log(x)
+    }
+
+    function openNav(x) {
+        x.classList.toggle("change");
+
+        document.getElementById("another-burger").style.display = "block";
+        document.getElementById("Sidenav").style.width = "250px";
+        document.body.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+
+        // document.getElementById("another-burger").style.marginLeft= "250px";
+        // document.getElementById("hide").style.display = "none";
+
+    }
+
+    function closeNav() {
+        document.getElementById("Sidenav").style.width = "0";
+        document.getElementById("another-burger").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+    }
+
+
+    window.onclick = function (event) {
+        var anotherBurger = document.getElementById("another-burger");
+        var html = document.documentElement;
+        if (event.target === html) {
+            document.getElementById("Sidenav").style.width = "0";
+            document.getElementById("another-burger").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+            anotherBurger.classList.toggle("change")
+        }
+    }
+</script>
+</body>
 </html>
