@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="animsidenav.css">
+    </head>
+    <body>
+    <div id="sidenav" onclick="togglemenu();">
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+        <li>Home</li>
+            <li>Gallery</li>
+            <li>Contact Us</li>
+            <li>Abouts</li>
+            <li>More &#9662;</li>
+        </ul>
+        </div>
+        <script>
+        
+        function togglemenu(){
+            document.getElementById("sidenav").classList.toggle('.active');
+        }
+        </script>
+    </body>
+</html>
