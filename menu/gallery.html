@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="gallery.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<title> Gallery</title>
+    </head>
+    <body>
+        <div class="slidenav">
+            <ul>
+                <li> <a href="home.html">HOME</a></li>
+                <li> <a href="gallery.html" class="act">GALLERY</a></li>
+                <li> <a href="#">BLOG</a></li>
+                <li> <a href="#">ABOUT</a></li>
+                <li> <a href="#">CONTACT</a></li>
+            </ul>
+            <button class="slide-btn">
+                <span> </span>
+            </button>
+        </div>
+        <div class="top">
+        <h1> Demo</h1>
+        </div>
+            <div class="body">
+        <h2 style="text-align: center">Photos</h2>
+            
+        </div>
+        
+            <footer> &copy; copyright</footer>
+        <script>
+            $(document).ready(function(){
+                $('.slide-btn').click(function(){
+                    $('.slidenav').toggleClass('active');
+                    $('.slide-btn').toggleClass('toggle');
+                })
+            })
+        </script>
+    </body>
+</html>

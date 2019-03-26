@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="home.css">
+        <title> HOME </title>
+    </head>
+    <body>
+        <div class="slidenav">
+            <ul>
+                <li> <a href="home.html">HOME</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">ABOUTS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <button class="slide-btn">
+                <span></span>
+            </button>
+        </div>
+        <div class="top">
+          <h1> demo </h1>
+        </div>
+        <div class="row">
+                <div class="column">
+                 <div class="container">
+                    <img src="1.jpg" style="width: 100%" class="image">
+                     <div class="overlay">
+                     <div class="text"> #Project1</div>
+                     </div>
+                    </div>
+                </div>
+            <div class="column">
+                 <div class="container">
+                    <img src="2.jpg" style="width: 100%" class="image">
+                     <div class="overlay">
+                     <div class="text"> #Project2</div>
+                     </div>
+                    </div>
+                </div>
+                <div class="column">
+                 <div class="container">
+                    <img src="3.jpg" style="width: 100%" class="image">
+                     <div class="overlay">
+                     <div class="text"> #Project3</div>
+                     </div>
+                    </div>
+                </div>
+                <div class="column">
+                 <div class="container">
+                    <img src="4.jpg" style="width: 100%" class="image">
+                     <div class="overlay">
+                     <div class="text"> #Project4</div>
+                     </div>
+                    </div>
+                </div>
+                <div class="column">
+                 <div class="container">
+                    <img src="5.jpg" style="width: 100%" class="image">
+                     <div class="overlay">
+                     <div class="text"> #Project5</div>
+                     </div>
+                    </div>
+                </div>
+                <div class="column">
+                 <div class="container">
+                    <img src="6.jpg" style="width: 100%" class="image">
+                     <div class="overlay">
+                     <div class="text"> #Project6</div>
+                     </div>
+                    </div>
+                </div>
+                <div class="column">
+                 <div class="container">
+                    <img src="7.jpg" style="width: 100%" class="image">
+                     <div class="overlay">
+                     <div class="text"> #Project7</div>
+                     </div>
+                    </div>
+                </div>
+                <div class="column">
+                 <div class="container">
+                    <img src="8.jpg" style="width: 100%" class="image">
+                     <div class="overlay">
+                     <div class="text"> #Project8</div>
+                     </div>
+                    </div>
+                </div>
+                <div class="column">
+                 <div class="container">
+                    <img src="9.jpg" style="width: 100%" class="image">
+                     <div class="overlay">
+                     <div class="text"> #Project9</div>
+                     </div>
+                    </div>
+                </div>
+                <div class="column">
+                 <div class="container">
+                    <img src="10.jpg" style="width: 100%" class="image">
+                     <div class="overlay">
+                     <div class="text"> #Project10</div>
+                     </div>
+                    </div>
+                </div>
+        </div>
+        <footer> &copy; copyright </footer>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('.slide-btn').click(function(){
+                    $('.slidenav').toggleClass('active');
+                    $('.slide-btn').toggleClass('toggle');
+                })
+            })
+        </script>
+    </body>
+</html>

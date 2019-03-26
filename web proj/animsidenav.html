@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="animsidenav.css">
+    </head>
+    <body>
+        <div class="slidenav">
+            <ul>
+                <li> <a href="#">HOME</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">ABOUTS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <button class="slide-btn">
+                <span></span>
+            </button>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('.slide-btn').click(function(){
+                    $('.slidenav').toggleClass('active');
+                    $('.slide-btn').toggleClass('toggle');
+                })
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            
+        }
+        section{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section:nth-child(odd){
+            background-color:aliceblue;
+        }
+        section:before{
+            content: attr(alt);
+            color: #262626;
+            font-size: 8em;
+        }
+        ul{
+            position:static;
+            width: 100%;
+            background-color: aquamarine;
+            position: absolute;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            letter-spacing: 0;
+            justify-content: space-around;
+        }
+        li{
+            list-style: none;
+            
+        }
+        li a{
+            text-decoration: none;
+            line-height: 50px;
+            box-sizing: border-box;
+            font-weight: bold;
+            color: darkgreen;
+            text-transform: uppercase;
+        }
+    </style>
+    </head>
+    <body>
+        <ul>
+        <li><a href="#sec1"> sec 1</a> </li>
+            <li><a href="#sec2"> sec 2</a> </li>
+            <li><a href="#sec3"> sec 3</a> </li>
+            <li><a href="#sec4"> sec 4</a> </li>
+            <li><a href="#sec5"> sec 5</a> </li>
+            
+        </ul>
+    <section id="sec1" alt="Section 1"></section>
+    <section id="sec2" alt="Section 2"></section>
+    <section id="sec3" alt="Section 3"></section>
+    <section id="sec4" alt="Section 4"></section>
+    <section id="sec5" alt="Section 5"></section>
+    </body>
+</html>

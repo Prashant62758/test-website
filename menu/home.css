@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.slidenav{
+    position: fixed;
+    width: 30%;
+    height: 100%;
+    background-color: #A3B1f3;
+    top: 7%;
+    left: -30%;
+    transition: 0.3s linear;
+}
+.active{
+    left: 0;
+}
+.slidenav ul{
+    margin: 0;
+    padding: 20px 20px;
+}
+.slidenav ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.slidenav ul li a{
+    text-decoration: none;
+    padding: 12px 16px;
+    font-size: 10px;
+    display: block;
+    color: #ffd;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: .2s linear;
+}
+.slidenav ul li a:hover{
+    opacity: 1;
+    font-size: 15px;
+}
+.slide-btn{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height:50px;
+    background-color: #abc;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.slide-btn span{
+    position: absolute;
+    width: 35px;
+    height: 5px;
+    background-color: #bd9bce;
+    display: block;
+    left: 7px;
+    transition: .3s linear;
+}
+.slide-btn span:before{
+    position: absolute;
+    display: block;
+    content: "";
+    top: -10px;
+    width: 35px;
+    height: 5px;
+    background-color: #bd9bce;
+    transition: .3s linear;
+}
+.slide-btn span:after{
+    position: absolute;
+    display: block;
+    content: "";
+    top: 10px;
+    background-color: #bd9bce;
+    width: 35px;
+    height: 5px;
+    transition: .3s linear;
+}
+.slide-btn.toggle span{
+    background-color: transparent;
+}
+.slide-btn.toggle span:before{
+    top: 0;
+    transform: rotate(-45deg);
+}
+.slide-btn.toggle span:after{
+    top: 0;
+    transform: rotate(45deg);
+}
+.top{
+    position: static;
+    height: 50px;
+    background-color: #bdb9ce;
+    text-align: center;
+    width: 100%;
+    top: -10%;
+}
+.top h1{
+    margin: 0;
+    color: #ffe;
+    text-transform: capitalize;
+    text-shadow: 5px 7px 2px gray;
+    text-align: center;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #bd9bce;
+    padding: 15px;
+}
+@media screen and (max-height : 660px){
+    .slidenav{
+        top: 12%;
+    }
+    .slide-btn{
+        float: none;
+    }
+}
+@media screen and (max-width : 960px){
+    .top{
+       float: none;
+        position: static;
+        
+    }
+    .slide-btn{
+        position: fixed;
+        float: left;
+        margin-left: inherit;
+    }
+    .slide-btn span{
+        position: fixed;
+        float: none;
+    }
+    
+}
+
