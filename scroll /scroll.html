@@ -1,169 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        html{
-            scroll-behavior: smooth;
-        }
-        body{
-            margin: 0;
-            padding: 0;
-            
-        }
-        section{
-           
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        section:nth-child(odd){
-            background-color:aliceblue;
-        }
-        section:before{
-            content: "";
-            color: #262626;
-            font-size: 8em;
-        }
-        ul{
-            position: sticky;
-            width: 100%;
-            background-color: #e1dcb3;
-            display: flex;
-            margin: 0;
-            padding: 0;
-            top: 0;
-            letter-spacing: 0;
-            justify-content: space-around;
-        }
-        li{
-            list-style: none;
-            
-        }
-        li a{
-            text-decoration: none;
-            line-height: 50px;
-            box-sizing: border-box;
-            font-weight: bold;
-            color: #f1a;
-            text-transform: uppercase;
-            cursor: pointer;
-            opacity: 0.6;
+    <link rel="stylesheet" type="text/css" href="scroll.css">
     
-        }
-        li a:hover{
-            opacity: 1;
-        }
-        header{
-            background-color: rgba(0,0,0,.3);
-            padding: 1px;
-        }
-        header h1{
-            text-align: center;
-                color: #ffe;
-            text-shadow: 3px 4px 3px #ffc;
-            
-        }
-        section h2{
-            text-align: center;
-        }
-        .card{
-            box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2);
-        }
-
-        .container{
-            padding:0  9px;
-            text-align: center;
-            float: none;
-        }
-        .container:after, .row:after{
-            content: "";
-            clear: both;
-            display: table-cell;
-        }
-        .title{
-            color: gray;
-        }
-        .button{
-            width: 100%;
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #4248;
-            text-align: center;
-            cursor: pointer;
-        }
-        .button:hover{
-            background-color: #555;
-        }
-        .column{
-            float: left;
-            width: 60%;
-            display:block;
-            padding: 0 8px;
-        }
-        @media screen and (max-width: 400px){
-            .column{
-                width: 50%;
-                display: block;
-                height: auto;
-            }
-        }
-        input[type=text], textarea{
-            width: 100%;
-            border-radius: 5px;
-            padding: 6px;
-            margin-bottom: 16px;
-            margin-top: 6px;
-            resize: vertical;
-            border:  1px solid #00f;
-            box-sizing: border-box;
-        }
-        input[type=submit]{
-            padding: 15px;
-            outline: none;
-            border: none;
-            background-color: gainsboro;
-        }
-        footer{
-            background-color: #111;
-        }
-    </style>
     </head>
     <body>
         <header>
             <h1>Demo</h1>
         </header>
-        <ul>
-        <li><a href="#sec1"> home</a> </li>
-            <li><a href="#sec2">blog </a> </li>
-            <li><a href="#sec3"> gallery</a> </li>
-            <li><a href="#sec4"> contact</a> </li>
-            <li><a href="#sec5"> about</a> </li>
-        </ul>
-    <section id="sec1" alt="Section 1" >
-         <h2> Home page</h2>
-        </section>
-    <section id="sec2" alt="Section 2"><h2>Blog</h2></section>
-    <section id="sec3" alt="Section 3"><h2>Gallery</h2></section>
-    <section id="sec4" alt="Section 4">
-    <h1> contact</h1>
-        <div class="column" style="margin-top: 14%">
-        <div class="card">
-            <img src="/modal/Smiley-Thumbnail.png" alt="avatar" style="width: 100%">
-            <div class="container">
-            <h2> Rathor vai</h2>
-                <p class="title">CEO, Desiginer  &amp; Founder.</p>
-                <p>rathor43@gmail.com</p>
-                <p><button class="button">Contact</button></p>
-            </div>
+        <div class="topnav">
+        <a href="#sec1">home</a>
+            <a href="#sec2">blog</a>
+            <a href="#sec3">gallery</a>
+            <a href="#sec4">contact</a>
+            <a href="#sec5">about</a>
+            <div class="search"><form action="/action_page.php"><input type="text" name="search" placeholder="Search..."><button type="submit">Search</button></form>
             </div>
         </div>
-        
-     </section>
+    <section id="sec1" alt="Section 1" style="height: 600px; background-color: ">
+         <h2> Home page</h2>
+        </section>
+    <section id="sec2" alt="Section 2" style="height: 600px; background-color: "><h2>Blog</h2></section>
+    <section id="sec3" alt="Section 3" style="height: 600px; background-color: "><h2>Gallery</h2></section>
+    <section id="sec4" alt="Section 4" style="height: auto; background-color: ">
+
+        <div class="row">
+            <h1> Contact Team </h1>
+            <div class="column">
+                <div class="card">
+                    <img src="img.jpg" alt="avatar" style="width: 100%">
+                    <div class="contain">
+                        <h2>ABC</h2>
+                        <p class="title"> CEO & founder </p>
+                        <p>some text </p>
+                        <p> example@gmail.com</p>
+                        <button href="tel: +9779846892706" class="button">Contact</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="column">
+                <div class="card">
+                    <img src="img.jpg" alt="avatar" style="width: 100%">
+                    <div class="contain">
+                        <h2>ABC</h2>
+                        <p class="title"> CEO & founder </p>
+                        <p>some text </p>
+                        <p> example@gmail.com</p>
+                        <button href="tel: +9779846892706" class="button">Contact</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="column">
+                <div class="card">
+                    <img src="img.jpg" alt="avatar" style="width: 100%">
+                    <div class="contain">
+                        <h2>ABC</h2>
+                        <p class="title"> CEO & founder </p>
+                        <p>some text </p>
+                        <p> example@gmail.com</p>
+                        <button href="tel: +9779846892706" class="button">Contact</button>
+                    </div>
+                    </div>
+                </div>
+        </div>
+                 </section>
     <section id="sec5" alt="Section 5">
-         <form>
+        <div class="top">
+            <h1 style="text-align: center; padding: 20px;"> Write your comment.... </h1>
+         <form class="frm" action="/action_page.php">
             <label for="username"> USERNAME </label>
         <input type="text">
             <label for="email">E-MAIL</label>
@@ -176,12 +80,16 @@
                     <option> Nepal</option>
              </select>
              <label for="comment">COMMENT</label>
-                <textarea placeholder="feedback...." height="150px"></textarea>
+                <textarea placeholder="feedback...." style="height:150px;"></textarea>
                 <input type="submit" value="submit">
             </form>
+        </div>
         </section>
+        <div class="social">
+
+        </div>
         <footer>
-        &copy;
+        &copy; footer
         </footer>
     </body>
 </html>
