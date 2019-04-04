@@ -101,13 +101,17 @@
         }
         .frm input[type=submit]{
         float: right;
-            background-color: #D8B5Fa;
+            background-color: #D8B5FA;
             padding: 9px;
             margin-top: 8px;
             margin-right: 2px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            opacity: .8;
+            }
+            .frm input[type=submit]:hover{
+                opacity: 1;
             }
         .frm input[type=text]:focus,  textarea:focus{
             background-color: #fff;
@@ -144,7 +148,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            opacity: 0.7;
+            opacity: 0.8;
             transition: .1s linear;
             }
         .search button:hover{
