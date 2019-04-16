@@ -1,13 +1,14 @@
 html{
 	scroll-behavior: smooth;
-	margin: 0;
-	padding: 0;
-	align-items: center;
-	justify-content: center;
-	align-content: center;
+	
 }
 *{
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
 }
 body
 {
@@ -15,20 +16,15 @@ body
     padding: 0;
     background-color: #dff;
     color: #666;
-    box-sizing: border-box;
 }
-#Home,
-#Portfolio,
-#Gallery,
-#Contact,
-#About{
+#Home, #Portfolio, #Gallery, #Contact, #About{
 	box-sizing: border-box;
-	padding: 10px;
+	padding: 0;
 	align-content: center;
 	justify-content: center;
 	height: auto;
-/*	margin:0;
-*/}
+    margin: 0;
+}
 .toggle{
     /*position: absolute;
     top: 0;
@@ -46,15 +42,15 @@ body
 .topnav{
     position: fixed;
 	width: 100%;
-	height: 50px;
+	/*height: 50px;*/
 	background-color: #a9f1df;
-	position: fixed;
 	top: 0;
 	left: 0
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
-	z-index: 1;
+/*	overflow: hidden;
+*/	z-index: 1;
+    box-sizing: border-box;
     }
 .topnav a
 {
@@ -64,10 +60,10 @@ body
 	float: left;
 	padding: 12px 20px;
 	text-align: center;
-	color: #fee;
+	color: #ffd;
 	line-height: 25px;
 	transition: .4s linear;
-box-sizing: border-box;
+/*box-sizing: border-box;*/
 
 }
 .topnav a:hover{
@@ -76,12 +72,12 @@ box-sizing: border-box;
  .topnav .search
           {
             float: right;
+            
         }
     .search input[type=text]
     	{ 
             padding: 9px ;
             margin-top: 8px;
-            margin-right:;
             border: none;
             border-radius: 4px;
         }
@@ -117,6 +113,7 @@ box-sizing: border-box;
             .search input[type=text]{
                 width: 80%;
                 margin-left: 20px;
+                margin-bottom: 5px;
               }
             .toggle{
                 display: block;
@@ -145,64 +142,17 @@ box-sizing: border-box;
         }
 
 
-         .bg-image
-        {
-            box-sizing: border-box;
-            background-image: url(3.jpg);
-            /*add the blur effect*/
-            filter: blur(8px);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        .bg-text
-        {
-            position: absolute;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
-            color: white;
-            float:  none;
-            font-weight: bold;
-            border: 3px solid #f1f1f1;
-           width: 80%;
-           top: 50%;
-           left: 50%;
-           transform: translate(-50%, -40%);
-            padding: 10px;
-            text-align: center;
-            z-index: 0;
-        }
-        .background-effect
-        {
-            position: relative;
-            background-image: url(9.jpg);
-            min-height: 500px;
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .background-effect span
-        {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            text-align: center;
-            color: #FEE;
-            font-size: 50px;
-            transform: translate(-50%, -50%);
-        }
-
-
-
          .main
         {
-            max-width: 1000px;
-            margin: auto;
-            padding: 0;
-
+        padding-top: 40px;
+        float: left;
+        display: block;
+        /*align-items: center;
+        justify-content: center;
+        vertical-align: center;
+        box-sizing: border-box;
+        max-width: 1000px;
+        margin: 0 auto;*/
         }
         .main h1{
             font-size: 50px;
@@ -213,9 +163,9 @@ box-sizing: border-box;
             text-align: center;
             /*color: #ddf;
 */        }
-        .roww{
+        /*.roww{
             margin: 0 -8px;
-            }
+            }*/
         .roww, .roww > .columnn{
             padding: 15px;
         }
@@ -251,8 +201,8 @@ box-sizing: border-box;
         div.thumb{
             text-align: center;
             color: #dff;
-            max-width: 1000px;
-            margin: auto;
+            /*max-width: 1000px;*/
+           /* margin: auto;*/
             align-content: center;
             justify-content: center;
             align-items: center;
@@ -277,10 +227,10 @@ box-sizing: border-box;
             text-align: center;
         }
         .responsive{
-            padding: 6px;
+            padding: 5px;
             float: left;
-/*            display: block;
-*/            width: 33.33%;
+            display: block;
+            width: 33.33%;
             box-sizing: border-box;
             align-items: center;
             justify-content: center;
@@ -290,37 +240,60 @@ box-sizing: border-box;
             display: table;
             clear: both;
         }
-       @media screen and (max-width: 980px){
-            .columnn, .responsive{
-                float: left;
-                width: 32.33%;  
-                margin-left: 5px;
+       @media screen and (max-width: 880px){
+            div.thumb{
+                padding: 0;
+                box-sizing: border-box;
+                margin: 0;
+                /*overflow: hidden;*/
+            }
+            .columnn{
+                width: 48.99%;
+                
+            }
+            .responsive{
+
+                width: 33.33%;
+               /* margin-left: 30px*/;
 
             }
-            /*.responsive{
-
-                width: 32.33%;
-                margin-left: 30px;
-
-            }*/
         }
-        @media screen and (max-width: 700px){
-            .columnn, .responsive{
+        @media screen and (max-width: 640px){
+            div.thumb{
+                padding: 0;
+                box-sizing: border-box;
+                margin: 0;
+               
+            }
+            .main{
                 width: 100%;
-          	/* justify-content: center;
-         		align-content: center;*/
+                /*float: left;*/
+                /*box-sizing: border-box;*/
+            }
+            .columnn{
+                width: 100%;
+               float: left;
+                display: block;
+                
+            }
+            .responsive{
+                width: 100%;
+               float: left;
+                display: block;
+
             }
         }
         .row{
-            display: block;
-            padding: 10px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
         }
          .column
          {
             display: block;
-            padding: 30px;
+            padding: 10px;
             float: left;
-            width: 33.33%;
+            width: 32.33%;
             justify-content: center;
             align-content: center;
             align-items: center;
@@ -341,7 +314,6 @@ box-sizing: border-box;
             content: "";
             clear: both;
             display: table;
-            box-sizing: inherit;
         }
         .title{
             color: #1EA980;
@@ -363,6 +335,12 @@ box-sizing: border-box;
         .button:hover{
             background-color: #A890FE;
         }
+         @media screen and (max-width: 980px){
+            .column{
+                width: 48.99%;  
+                margin-left: 5px;
+            }
+         }
         @media screen and (max-width: 650px){
             .column{
                 display: block;
@@ -371,48 +349,12 @@ box-sizing: border-box;
 */            }
         }
 
-
-
-
-        form .frm{
-            display: block;
-            border-radius: 5px;
-            background-color: #ffe;
-            box-sizing: border-box;
-            height: auto;
-            padding: 20px;
-        }
-        .frm input[type=text], select, textarea{
-            width: 100%;
-            border-radius: 5px;
-            padding:12px 20px;
-            margin-bottom: 16px;
-            margin-top: 6px;
-            resize: vertical;
-            border:  1px solid #ffe;
-            box-sizing:border-box;
-        }
-        .frm button{
-            /*float: right; */          
-            background-color: #D8B5FF;
-            padding: 9px;
-            margin-bottom: 4px;
-            margin-right: 2px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }            
-        .frm button:hover{
-                background-color: #A890FE;
-            }
-        .frm input[type=text]:focus,  textarea:focus{
-            background-color: #fff;
-            color: #111;
-        }
         footer
         {
             width: 100%;
             text-align: center;
             background-color: #1EA980;
-            height: 30px;
+            height: 50px;
+            line-height: 50px;
+            color: #ffd;
         }
