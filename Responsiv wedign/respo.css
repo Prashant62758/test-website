@@ -1,4 +1,7 @@
-.gallery-block{
+      nav.bg-light {
+    background-color: #b3d7ff!important;
+      }
+      .gallery-block{
         padding-top: 60px;
         padding-bottom: 60px;
       }
@@ -23,8 +26,8 @@
       .img-fluid {
     max-width: 100%;
     height: auto;
-    padding: 10px;
-}
+/*    padding: 10px;
+*/}
       .gallery-block.compact-gallery .item .info{
         position: relative;
         display: inline-block;
