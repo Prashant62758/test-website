@@ -2,7 +2,10 @@
         scroll-behavior: smooth;	
       }	
       nav.bg-light {	
-    background-color: #0a396b!important;	
+    background-color: #0a396b!important;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
       }	
       nav.navbar-light .navbar-brand {	
     color: rgb(145, 219, 226);	
@@ -51,8 +54,24 @@ nav form button.btn{
  }	
 
 
-
-
+.media{
+/*  max-width: 100%;
+*/  display: block;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.top{
+  padding-bottom: 100px;
+  padding-top: 100px;
+  background-image: linear-gradient(#129834, #288732, #267973);
+  color: #999fff;
+}
+.image{
+  border-radius: 50%;
+  shape-outside: circle();
+  margin: 5px;
+  float: left;
+}
 
 
 
